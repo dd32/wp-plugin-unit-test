@@ -62,6 +62,5 @@ jobs:
                 npx wp-env run cli wp core version
                 npx wp-env run cli wp eval 'echo "PHP: " . phpversion() . "; WP: " . $GLOBALS["wp_version"];'
                 npx wp-env run tests-cli phpunit -- --version
-                npx wp-env run tests-cli vendor/bin/phpunit -- --version
                 npm run phpunit -- --version
                 npm run composer -- --version
