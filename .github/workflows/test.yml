@@ -56,4 +56,4 @@ jobs:
                 npm run wp-env run cli php -- -v
                 npm run wp-env run cli wp core version
                 npm run wp-env run cli wp eval 'echo "PHP: " . phpversion() . "; WP: " . $GLOBALS["wp_version"];'
-                npm run wp-env run tests-cli phpunit -- --version
+                npm run wp-env run tests-cli phpunit -- -v
