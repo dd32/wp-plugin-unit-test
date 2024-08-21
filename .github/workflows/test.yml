@@ -66,3 +66,6 @@ jobs:
                 npm run composer -- --version
                 npm run composer test -- --version
 
+            - name: Run the Tests
+              run: npm run phpunit
+
