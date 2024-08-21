@@ -64,3 +64,5 @@ jobs:
                 npx wp-env run tests-cli phpunit -- --version
                 npm run phpunit -- --version
                 npm run composer -- --version
+                npm run composer test -- --version
+
