@@ -5,6 +5,6 @@
   "scripts": {
     "wp-env": "wp-env",
     "composer": "wp-env run cli --env-cwd=wp-content/plugins/wp-plugin-unit-test composer --",
-    "phpunit": "wp-env run tests-cli --env-cwd=wp-content/plugins/wp-plugin-unit-test phpunit --"
+    "phpunit": "wp-env run tests-cli --env-cwd=wp-content/plugins/wp-plugin-unit-test vendor/bin/phpunit --"
   }
 }
