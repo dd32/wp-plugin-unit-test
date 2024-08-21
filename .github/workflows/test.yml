@@ -49,11 +49,11 @@ jobs:
               with:
                 timeout_minutes: 10
                 max_attempts: 3
-                command: npm run env start
+                command: npm run wp-env start
 
             - name: Versions
               run: |
-                npm run env run cli php -- -v
-                npm run env run cli wp core version
-                npm run env run cli wp eval 'echo "PHP: " . phpversion() . "; WP: " . $GLOBALS["wp_version"];'
-                npm run env run tests-cli phpunit -- --version
+                npm run wp-env run cli php -- -v
+                npm run wp-env run cli wp core version
+                npm run wp-env run cli wp eval 'echo "PHP: " . phpversion() . "; WP: " . $GLOBALS["wp_version"];'
+                npm run wp-env run tests-cli phpunit -- --version
