@@ -3,6 +3,7 @@
     "@wordpress/env": "^5.16.0"
   },
   "scripts": {
+    "env": "wp-env",
     "wp-env": "wp-env"
   }
 }
