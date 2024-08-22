@@ -5,12 +5,14 @@
 
 class Tests_Email extends WP_UnitTestCase {
 	public function test_can_send_email() {
-		$before = did_action( 'wp_mail_failed' );
+		$failure = false;
+		$callback = function( $error ) use( &$failure ) {
+			$failure = $error;
+		};
+		add_action( 'wp_mail_failed', $callback );
 
 		wp_mail( 'test@example.org', 'test', 'test' );
 
-		$after = did_action( 'wp_mail_failed' );
-
-		$this->assertEquals( $before, $after );
+		$this->assertNotWPError( $failure );
 	}
 }
